@@ -52,6 +52,7 @@ function App() {
     <div className="analyzer-container">
       <h1>Sentiment Analyzer</h1>
       <p>Powered by FastAPI & LinearSVC on Render</p>
+      <p style={{ color: 'gray', fontSize: '0.9rem' }}>Enter text to analyze its sentiment.</p>
 
       <textarea
         value={inputText}
