@@ -1,0 +1,103 @@
+/* Base Styles for Large Screens (Desktop First) */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.analyzer-container {
+  /* Use a percentage width for flexibility, maxed at 500px */
+  width: 90%; 
+  max-width: 500px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  
+  margin: 50px auto; /* Center the container horizontally */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px; /* Slightly larger padding for touch targets */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
+}
+
+button {
+  width: 100%; /* Make button full width for easy clicking on small screens */
+  padding: 12px 20px;
+  font-size: 1.1rem; /* Slightly larger text */
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.result-box {
+  margin-top: 20px;
+  border: 2px solid #eee;
+  padding: 15px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.error-message {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- */
+/* Media Query for Small Screens (e.g., Smartphones) */
+/* Max-width set to 600px, covering most portrait mobile views */
+@media (max-width: 600px) {
+  
+  #root {
+    padding: 0.5rem; /* Reduce overall padding */
+  }
+
+  .analyzer-container {
+    width: 95%; /* Use almost full width */
+    margin-top: 20px;
+    padding: 15px; /* Reduce padding inside the box */
+    box-shadow: none; /* Remove box shadow for a cleaner look */
+    border: none; /* Remove border for a cleaner look */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Smaller heading */
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
