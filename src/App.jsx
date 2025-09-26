@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="analyzer-container">
       <h1>Sentiment Analyzer</h1>
-      <p>Powered by FastAPI & Your ML Model on Render</p>
+      <p>Powered by FastAPI & LinearSVC on Render</p>
 
       <textarea
         value={inputText}
